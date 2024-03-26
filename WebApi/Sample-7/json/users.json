@@ -1,0 +1,26 @@
+[
+  {
+    "Id": 1,
+    "Username": "hakanaltindis",
+    "FirstName": "Hakan",
+    "LastName": "Altındiş",
+    "Interest": "C#, GO, SQL Server, Azure DevOps",
+    "Profile": "https://github.com/hakanaltindis"
+  },
+  {
+    "Id": 2,
+    "Username": "blackmamba",
+    "FirstName": "Black",
+    "LastName": "Mamba",
+    "Interest": "Snake, GO",
+    "Profile": "https://github.com/hakanaltindis"
+  },
+  {
+    "Id": 3,
+    "Username": "CardE",
+    "FirstName": "Carde",
+    "LastName": "Carde",
+    "Interest": "WoW, LoL",
+    "Profile": "https://github.com/hakanaltindis"
+  }
+]

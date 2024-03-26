@@ -36,13 +36,16 @@ func init() {
 }
 
 func InsertProduct(data Product) {
-	result, err := db.Exec("INSERT INTO product(title, description, price) VALUES($1, $2, $3)", data.Title, data.Description, data.Price)
+	result, err := db.Exec("INSERT INTO product(title, description, price) VALUES($1, $2, $3) RETURNING id", data.Title, data.Description, data.Price)
 	if err != nil {
 		log.Fatal(err)
 	}
 
-	lastInsertedId, _ := result.LastInsertId()
-	fmt.Printf("Eklenen kayıt id'si (%d)", lastInsertedId)
+	rowAffected, err := result.RowsAffected()
+	if err != nil {
+		log.Fatal(err)
+	}
+	fmt.Printf("Eklenen kayıt sayısı (%d)\n", rowAffected)
 }
 
 func UpdateProduct(data Product) {
@@ -52,6 +55,9 @@ func UpdateProduct(data Product) {
 	}
 
 	rowAffected, err := result.RowsAffected()
+	if err != nil {
+		log.Fatal(err)
+	}
 	fmt.Printf("Etkilenen Kayıt Sayısı (%d)", rowAffected)
 }
 

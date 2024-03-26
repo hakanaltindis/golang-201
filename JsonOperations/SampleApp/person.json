@@ -1,0 +1,1 @@
+{"ID":9,"FirstName":"Hakan","LastName":"Altındiş","UserName":"hakanaltindis","Gender":"Male","Name":{"Family":"CS","Personal":"Hakan"},"Email":[{"ID":1,"Kind":"Personal","Address":"hakanaltindis@hotmail.com"},{"ID":1,"Kind":"Work","Address":"hakan.altindis@d-teknoloji.com.tr"}],"Interest":[{"ID":1,"Name":"C#"},{"ID":2,"Name":"Azure DevOps"},{"ID":3,"Name":"Docker"}]}

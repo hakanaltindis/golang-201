@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>{{.Page.Name}}</title>
+    <meta name="description" content="{{.Page.Description}}">
+    <meta name="author" content="Hakan Altındiş">
+  </head>
+  <body>
+    <h1>{{.Page.Name}}</h1>
+    {{range .Users}}
+    <p>
+      <strong>{{.Id}} - {{.FirstName}} {{.LastName}}</strong> <i>by {{.Username}}</i>
+      <br>
+      <p> Profile: <a href="{{.Profile}}" target="_blank">github.com/{{.Username}}</a></p>
+      {{range .Interests}}
+      <ul>
+        <li>{{.Id}} - {{.Name}}</li>
+      </ul>
+      {{end}}
+    </p>
+    {{end}}
+  </body>
+</html>

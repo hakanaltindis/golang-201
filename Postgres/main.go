@@ -12,4 +12,6 @@ func main() {
 		Price:       44.99,
 	}
 	models.InsertProduct(product)
+
+	models.GetProducts()
 }
